@@ -1,0 +1,144 @@
+body {
+  background-color: #111;
+}
+
+#module-currentGiveaway {
+  width: 320px;
+  height: 370px;
+  background-image: url('https://d1mt9jmphk9kik.cloudfront.net/site/image1445513699.jpg');
+  background-position: 90% 64%;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#module-currentGiveaway-timer {
+  font-family: 'lato';
+  font-size: 30px;
+  font-weight: 300;
+  color: #fefefe;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 8px 0;
+}
+
+#module-currentGiveaway-item {
+  text-align: center;
+  padding: 25px 0 0;
+}
+
+#module-currentGiveaway-item > h2 {
+  font-weight: 300;
+}
+
+#module-currentGiveaway-item > img {
+  width: 100px;
+  height: auto;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 147, 156, 0.9) 0%,
+    rgba(0, 147, 156, 0.25) 1%,
+    rgba(199, 231, 233, 0) 67%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+h2 {
+  font-family: 'lato';
+  font-size: 14px;
+  color: #fefefe;
+}
+
+button {
+  border: none;
+  background-color: #00939c;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-family: 'Lato', sans-serif;
+  color: #fefefe;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 8px 0;
+  transition: all 0.35s ease;
+}
+
+#module-currentGiveaway-players {
+  width: 200%;
+  margin-left: -3.3em;
+  margin-top: 0px;
+}
+
+#module-currentGiveaway-players > .player {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #333;
+  margin-right: 1%;
+  border-radius: 50%;
+}
+.animated {
+  animation: scroll 2.5s ease infinite;
+}
+#module-currentGiveaway-players > .player:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#module-currentGiveaway-players > .player:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+#module-currentGiveaway-players > .player:nth-child(3) {
+  animation-delay: 1s;
+}
+#module-currentGiveaway-players > .player:nth-child(5) {
+  animation-delay: 2s;
+}
+#module-currentGiveaway-players > .player:nth-child(6) {
+  animation-delay: 2.5s;
+}
+#module-currentGiveaway-players > .player:nth-child(7) {
+  margin-right: 0;
+  animation-delay: 3s;
+}
+
+#module-currentGiveaway-players > .player:nth-child(4) {
+  width: 4em;
+  height: 4em;
+  background-image: url('https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-goog/featured_attendees/dsc00080.jpg');
+  background-position: center;
+  background-size: cover;
+  animation-delay: 1.5s;
+  border: 2px solid #00939c;
+}
+
+#module-currentGiveaway-players > .player:not(:nth-child(4)) {
+  border: 1px solid white;
+  margin-bottom: 0.5em;
+}
+
+button:hover {
+  cursor: pointer;
+  cursor: hand;
+  /* osx */
+
+  background-color: #01686e;
+}
+
+#module-currentGiveaway-info {
+  text-align: center;
+  font-weight: 400;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
