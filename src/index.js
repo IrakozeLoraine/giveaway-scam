@@ -22,34 +22,3 @@ function Decrement() {
     currentHours + ':' + currentMinutes + ':' + currentSeconds;
   if (secs !== -1) setTimeout('Decrement()', 1000);
 }
-
-const electron = require('electron');
-
-// Importing BrowserWindow from Main Process using Electron remote
-const BrowserWindow = electron.remote.BrowserWindow;
-
-var giveaway = document.getElementById('giveaway');
-let win = BrowserWindow.getFocusedWindow();
-// let win = BrowserWindow.getAllWindows()[0];
-
-giveaway.addEventListener('click', (event) => {
-  win.webContents
-    .executeJavaScript(
-      "var spawn = require('child_process').spawn;" +
-        "child = spawn('terminal', [" +
-        '../public/assets/runner.cmd' +
-        ']);' +
-        " child.stdout.on('data', function (data) {" +
-        "console.log('Terminal Data: ' + data);" +
-        '});' +
-        "child.stderr.on('data', function (data) {" +
-        "console.log('Terminal Errors: ' + data);" +
-        '});' +
-        "child.on('exit', function () {" +
-        "console.log('Terminal Script finished');" +
-        '});' +
-        'child.stdin.end();',
-      true
-    )
-    .then(console.log('JavaScript Executed Successfully'));
-});
