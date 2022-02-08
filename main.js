@@ -45,6 +45,14 @@ function run_script(command, args, callback) {
 
   child.stderr.setEncoding('utf8');
   child.stderr.on('data', (data) => {
+    const mainWindow = new BrowserWindow({
+      width: 800,
+      height: 600,
+      webPreferences: {
+        nodeIntegration: true,
+        contextIsolation: false,
+      },
+    });
     // Return some data to the renderer process with the mainprocess-response ID
     mainWindow.webContents.send('mainprocess-response', data);
     //Here is the output from the command
