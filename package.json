@@ -2,12 +2,40 @@
   "name": "electron-scam",
   "version": "1.0.0",
   "main": "main.js",
+  "author": "Loraine Irakoze",
   "scripts": {
+    "dev": "yarn run development",
+    "dist:linux": "electron-builder --linux",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
-  "dependencies": {
-    "electron": "^17.0.0"
+  "devDependencies": {
+    "electron": "^17.0.0",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "appId": "com.giveaway.app",
+    "productName": "Electron Giveaway App",
+    "linux": {
+      "category": "Utility",
+      "maintainer": "Loraine Irakoze <mukezwa@gmail.com>",
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "synopsis": "An amazing giveaway app for your very needed book"
+    },
+    "deb": {
+      "depends": [
+        "gconf2",
+        "gconf-service",
+        "libnotify4",
+        "libappindicator1",
+        "libxtst6",
+        "libnss3"
+      ]
+    }
   }
 }
